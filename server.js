@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 const authRoutes = require("./routes/authRoutes");
 const friendInvitationRoutes = require("./routes/friendInvitationRoutes");
-const groupChatRoutes = require("./routes/groupChatRoutes")
+const groupChatRoutes = require("./routes/groupChatRoutes");
 
 const { createSocketServer } = require("./socket/socketServer");
 const path = require("path");
@@ -29,19 +29,18 @@ const server = http.createServer(app);
 createSocketServer(server);
 
 // Serve static files from the "/client/build" directory
-app.use(express.static(path.join(__dirname, './client/build')));
+app.use(express.static(path.join(__dirname, "/client/build")));
 
 // Serve the index.html file when the root URL ("/") is accessed
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
-
 
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-      server.listen(PORT, () => {
-        console.log(`MONGODB CONNECTED.....!`);
+    server.listen(PORT, () => {
+      console.log(`MONGODB CONNECTED.....!`);
       console.log(`SERVER STARTED ON ${PORT}.....!`);
     });
   })
