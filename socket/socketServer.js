@@ -21,7 +21,7 @@ const roomInitializeConnectionHandler = require("../socketControllers/room/roomI
 const createSocketServer = (server) => {
     const io = socket(server, {
         cors: {
-            origin: ["http://localhost:3000", "https://talkhouse-tv.netlify.app"],
+            origin: "*",
             methods: ["GET", "POST"],
         },
     });
