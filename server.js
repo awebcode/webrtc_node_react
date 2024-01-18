@@ -32,7 +32,7 @@ createSocketServer(server);
 app.use(express.static(path.join(__dirname, './client/build')));
 
 // Serve the index.html file when the root URL ("/") is accessed
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
