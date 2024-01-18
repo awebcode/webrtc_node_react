@@ -1,7 +1,7 @@
 # talkhouse
 WebRTC based peer to peer video calling and messaging web app build with MERN stack.
 
-# [Demo](https://talkhouse-tv.netlify.app/)
+# [Demo](https://webrtc-reactnode-asikur.onrender.com/)
 
 # Libraries used
 
@@ -44,7 +44,7 @@ i.e, every person maintains a p2p connection with every other person in the room
 1. Clone project
 
 ```
-git clone git@github.com:saalikmubeen/talkhouse.git
+https://github.com/Md-Asikur-Rahman2/webrtc_node_react
 ```
 
 ## Manual
