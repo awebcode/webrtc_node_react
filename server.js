@@ -29,11 +29,11 @@ const server = http.createServer(app);
 createSocketServer(server);
 
 // Serve static files from the "/client/build" directory
-app.use(express.static(path.join(__dirname, "client", "build")));
+app.use(express.static(path.join(__dirname,  "build")));
 
 // Serve the index.html file when the root URL ("/") is accessed
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client","build","index.html"));
+  res.sendFile(path.resolve(__dirname, "build","index.html"));
 });
 
 mongoose
