@@ -2,7 +2,7 @@
   "name": "discord-clone-backend",
   "version": "1.0.0",
   "description": "Backend of discord clone",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
